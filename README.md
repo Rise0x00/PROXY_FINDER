@@ -7,10 +7,9 @@ This is a simple tool that will help you to find active (anonymous,elite,Transpa
 2. auto refresh in every 2 minutes
 3. it gives you all active proxies with full information
 
-just lets make life easier, take a beer and relax
+Powered by https://free-proxy-list.net/
 
-
-## ⭕️ Getting Started
+## ⭕️ Installing
 git clone https://github.com/Rise0x00/PROXY_FINDER
 
 cd proxy-finder
@@ -21,7 +20,7 @@ chmod +x *
 
 wait for installation to finish
 
-## ⭕️ Fire up a tool
+## ⭕️ Start a tool
 
 python3 proxy-finder.py
 
