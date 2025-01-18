@@ -1,6 +1,8 @@
 # Most-powerful proxy feeder
 This is a simple tool that will help you to find active (anonymous,elite,Transparent ect) proxies that will help you in different stuffs.
 
+Use venv to installing pip packages on linux!
+
 ## ⭕️ Features
 
 1. easy to use
