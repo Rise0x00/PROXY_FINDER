@@ -21,7 +21,8 @@ echo ""
 echo "===== LETS START INSTALLING SOME ESSENTIAL STUFFS ====="
 
 echo "====== PROXY-FINDER SETUP ======"
-echo -e " $RESET******  SABRI ZAKI ******"                           
+echo -e " $RESET******  SABRI ZAKI ******"
+echo -e " $RESET**  RECODE BY Rise0x00 **"                            
 
 sleep 2
 
@@ -35,8 +36,8 @@ then
         apt-get upgrade
 	apt-get install git
 	apt-get install python3
-	pip2 install requests
-	pip2 install bs4
+	pip3 install requests
+	pip3 install bs4
         cd 
         chmod +x PROXY_FINDER/*
 sleep 6
