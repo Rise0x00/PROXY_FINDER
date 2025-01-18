@@ -12,7 +12,7 @@ Powered by https://free-proxy-list.net/
 ## ⭕️ Installing
 git clone https://github.com/Rise0x00/PROXY_FINDER
 
-cd proxy-finder
+cd PROXY_FINDER
 
 chmod +x *
 
