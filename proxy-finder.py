@@ -51,7 +51,7 @@ def main():
         return
 
     soup = BeautifulSoup(response.text, 'html.parser')
-    table = soup.find('table', {"id": "proxylisttable"})
+    table = soup.find("div", class_="table-responsive fpl-list")
 
     if not table:
         print(Red + "Таблица с прокси не найдена на странице." + Reset)

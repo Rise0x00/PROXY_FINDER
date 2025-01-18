@@ -11,9 +11,9 @@ just lets make life easier, take a beer and relax
 
 
 ## ⭕️ Getting Started
-git clone https://github.com/sabri-zaki/PROXY_FINDER
+git clone https://github.com/Rise0x00/PROXY_FINDER
 
-cd proxy-feeder
+cd proxy-finder
 
 chmod +x *
 
@@ -23,7 +23,7 @@ wait for installation to finish
 
 ## ⭕️ Fire up a tool
 
-python proxy-feeder.py
+python3 proxy-finder.py
 
 ENJOY.
 
