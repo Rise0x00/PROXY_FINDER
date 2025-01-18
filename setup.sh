@@ -1,7 +1,5 @@
 #!/bin/bash
 
-
-
 BOLD="\033[01;01m"     # Highlight
 RED="\033[01;31m"      # Issues/Errors
 GREEN="\033[01;32m"    # Success
@@ -20,21 +18,12 @@ blue="\033[1;34m"
 transparent="\e[0m"
 echo ""
 
- 
-
-
-
-
 echo "===== LETS START INSTALLING SOME ESSENTIAL STUFFS ====="
 
 echo "====== PROXY-FINDER SETUP ======"
- echo -e " $RESET******  SABRI ZAKI ******"                           
-
+echo -e " $RESET******  SABRI ZAKI ******"                           
 
 sleep 2
-
-
-
 
 echo -e " $purple >>Do you want to Continue: (Y) \c"
 
@@ -45,18 +34,17 @@ then
 	apt-get update
         apt-get upgrade
 	apt-get install git
-	apt-get install python2
+	apt-get install python3
 	pip2 install requests
 	pip2 install bs4
         cd 
         chmod +x PROXY_FINDER/*
 sleep 6
 	
-echo -e "$RESET YOUR READY TO GO, FIRE UP A TOOL "
+echo -e "$RESET Setup completed! Use python3 to run."
 
 else
 
 exit 0
 
 fi
-        
