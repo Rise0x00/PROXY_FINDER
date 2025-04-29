@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
-import time
+from time import sleep
 import itertools
 import threading
-import sys
 import requests
 from bs4 import BeautifulSoup
 
@@ -19,26 +18,23 @@ def animate():
     for c in itertools.cycle(['|', '/', '-', '\\']):
         if done:
             break
-        sys.stdout.write('\rWAIT A MOMENT I WILL DO IT QUICKLY ' + c)
-        sys.stdout.flush()
-        time.sleep(0.1)
-    sys.stdout.write('')
+        print(f'\rОжидайте... {c}', end="")
+        sleep(0.1)
+    print("")
 
 def main():
-    print(" " + Green + "   #############")
-    print(" " + Green + "   PROXY FINDER")
-    print(" " + Green + "   #############")
+    global done
+    print(f"{Green} #############")
+    print(f"{Green} PROXY FINDER")
+    print(f"{Green} #############")
 
     t = threading.Thread(target=animate)
     t.start()
-
-    time.sleep(10)
-    global done
+    sleep(5)
     done = True
 
-    print(Purple + "---> I FOUND THESE.......\n")
-    time.sleep(3)
-
+    print(f"\n{Purple}---> Найдено следующее.......\n")
+    sleep(3)
     print(Blue)
 
     proxy_domain = "https://free-proxy-list.net"
@@ -47,19 +43,19 @@ def main():
         response = requests.get(proxy_domain)
         response.raise_for_status()
     except requests.RequestException as e:
-        print(Red + "Ошибка при получении списка прокси: " + str(e) + Reset)
+        print(f"{Red}Ошибка при получении списка прокси: {e}{Reset}")
         return
 
     soup = BeautifulSoup(response.text, 'html.parser')
     table = soup.find("div", class_="table-responsive fpl-list")
 
     if not table:
-        print(Red + "Таблица с прокси не найдена на странице." + Reset)
+        print(f"{Red}Таблица с прокси не найдена на странице{Reset}")
         return
 
     for row in table.find_all('tr'):
         columns = row.find_all('td')
-        if len(columns) < 5:
+        if len(columns) < 5: 
             continue
         ip = columns[0].get_text(strip=True)
         port = columns[1].get_text(strip=True)
@@ -67,7 +63,7 @@ def main():
         anonymity = columns[4].get_text(strip=True)
         print(f"{ip}:{port}\t{country:20}\t{anonymity:10}")
 
-    print(" " + Grey + "JUST RUN ME ANYTIME, I WILL REFRESH PROXY LIST" + Reset)
+    print(f" {Grey}Перезапусти скрипт для обновления списка прокси{Reset}")
 
 if __name__ == "__main__":
     main()
