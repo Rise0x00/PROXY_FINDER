@@ -16,13 +16,10 @@ Cafe="\033[0;33m"
 Fiuscha="\033[0;35m"
 blue="\033[1;34m"
 transparent="\e[0m"
+
 echo ""
-
-echo "===== LETS START INSTALLING SOME ESSENTIAL STUFFS ====="
-
 echo "====== PROXY-FINDER SETUP ======"
-echo -e " $RESET******  SABRI ZAKI ******"
-echo -e " $RESET**  RECODE BY Rise0x00 **"                            
+echo -e " $RESET*****  BY Rise0x00 *****"                            
 
 sleep 2
 
@@ -42,7 +39,6 @@ then
         cd 
         chmod +x PROXY_FINDER/*
 sleep 6
-	
 echo -e "$RESET Setup completed! Use python3 to run."
 
 else
